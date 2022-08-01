@@ -32,6 +32,8 @@ public class ThreadTwoHashMapBroken extends Thread {
         ThreadTwoHashMapBroken tm = new ThreadTwoHashMapBroken(""+10);
 
         // What's wrong with this idea??...
+
+        // both threads are being intertwined in this example... which is not permissible
         new Thread("Run of " + 6){
             public void run(){
                 tm.runMapOfSize(6);
